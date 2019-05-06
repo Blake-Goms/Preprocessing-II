@@ -1,12 +1,25 @@
 .home {
+  // Start of home-page intro
+  .home-page {
+    border-bottom: 2px dashed lightgrey;
+    margin-bottom: 10px;
+    h2 {
+      padding: 10px 0;
+    }
+    p {
+      padding: 10px 0;
+    }
+    @media @mobile {
+      margin: 0 10px;
+    }   
+  }
+  //  End of my home-page intro
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
     
     .text-content {
       width: 48%;
@@ -19,6 +32,20 @@
 
       img {
         border-radius: 10px;
+      }
+    }
+    @media @mobile {
+      .content-section {
+        display: flex;
+        flex-direction: column;
+      }      
+      .text-content {
+        margin: 0 10px;
+        width: 95%;
+      }
+      .img-content {
+        width: 100%;
+        margin: 0 10px;
       }
     }
   }
@@ -36,26 +63,59 @@
       padding-right: 1%;
       padding-left: 0;
     }
+    @media @mobile {
+      .inverse-content{            
+      display: flex;
+      flex-direction: column;
+      }
+      .img-content {
+        order: 2;
+      }
+      .text-content {
+        order: 0;
+      }
   }
+}
 
   .content-destination {
     width: 75%;
-    margin: 0 auto 30px;
-
+    margin: 0 auto;
     img {
       border-radius: 10px;
     }
+
+    @media @mobile {
+      .content-destination{
+        max-width: 100%;
+        width: 100%;
+      }
+  }
   }
 
-  .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
 
+.content-pick {
+  padding-top: 30px;
+  border-top: 2px dashed @navigation-border;
+  display: flex;
+  justify-content: space-between;
+  .destination {
+    width: 30%;
+    margin-bottom: 30px;
+    .btn{
+      .btn-design(white, @eastern-blue, 7px);
+      text-align: center;
+      padding-top: 5px;
+      width: 85%;
+      font-weight: bold;
+    }    
+  }
+  @media @mobile {
     .destination {
-      width: 30%;
-      margin-bottom: 30px;
+      max-width: 100%;
+      width: 100%;
+      display: flex;     
+      flex-direction: column;      
     }
-  }
 }// home
+}
+}

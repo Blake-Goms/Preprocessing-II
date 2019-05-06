@@ -1,1 +1,17 @@
 // Navigation Styles here
+
+.header{
+    border-bottom: 2px dashed lightgrey;
+    padding: 20px 0;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    .display-flex();    
+    .navbar {
+        flex-direction: column;
+    }
+    @media @mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+}

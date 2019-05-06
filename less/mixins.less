@@ -1,1 +1,20 @@
 // Mixins in here
+// For Navigation
+.display-flex {
+    display: flex;    
+    justify-content: center;  
+    align-items: baseline;  
+}
+
+.child {
+    padding: 30px;
+}
+// End of Navigation
+
+// button parametric mixin
+// font, backgrnd color, border radius
+.btn-design(@f, @bg, @r ) {
+    color: @f;
+    background-color: @bg;
+    border-radius: @r;
+}
